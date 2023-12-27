@@ -175,7 +175,7 @@ body {
   color: var(--color-primary);
 }
 
-.support-card[hidden] {
+.support-card[hidden="true"] {
   display: none;
 }
 
@@ -187,4 +187,10 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@media (max-width: 25rem) {
+  .form__label {
+    --size: 2.75rem;
+  }
 }
