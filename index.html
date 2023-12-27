@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,88 @@
     <title>Vite + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="content">
+        <div class="wrapper">
+          <h1 class="visually-hidden">Support Rating</h1>
+          <article class="support-card">
+            <img
+              src="./src/assets/images/icon-star.svg"
+              alt=""
+              class="support-card__icon"
+            />
+            <h2 class="support-card__title">How did we do?</h2>
+            <p class="support-card__description">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering
+            </p>
+            <form class="form">
+              <div class="form__options">
+                <div class="form__option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-1"
+                    class="form__input"
+                  />
+                  <label for="rating-1" class="form__label">1</label>
+                </div>
+                <div class="form__option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-2"
+                    class="form__input"
+                  />
+                  <label for="rating-2" class="form__label">2</label>
+                </div>
+                <div class="form__option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-3"
+                    class="form__input"
+                  />
+                  <label for="rating-3" class="form__label">3</label>
+                </div>
+                <div class="form__option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-4"
+                    class="form__input"
+                  />
+                  <label for="rating-4" class="form__label">4</label>
+                </div>
+                <div class="form__option">
+                  <input
+                    type="radio"
+                    name="rating"
+                    id="rating-5"
+                    class="form__input"
+                  />
+                  <label for="rating-5" class="form__label">5</label>
+                </div>
+              </div>
+              <button class="btn btn--submit">Submit</button>
+            </form>
+          </article>
+          <article class="support-card support-card--thank">
+            <img
+              src="./src/assets/images/illustration-thank-you.svg"
+              alt=""
+              class="support-card__image"
+            />
+            <p class="support-card__rating">You selected 4 out of 5</p>
+            <h2 class="support-card__title">Thank you!</h2>
+            <p class="support-card__description">
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, dont hesitate to get in touch!
+            </p>
+          </article>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
