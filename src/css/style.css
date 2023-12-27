@@ -1,0 +1,190 @@
+/* overpass-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/overpass-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Overpass";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/overpass-v13-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-ff: "Overpass", sans-serif;
+
+  --color-primary: hsl(25, 97%, 53%);
+  --color-background: hsl(216, 12%, 8%);
+  --color-heading: hsl(0, 0%, 100%);
+  --color-text: hsl(217, 12%, 63%);
+
+  --color-hover-radio: hsl(216, 12%, 54%);
+  --color-initial-radio: hsl(213, 19%, 18%);
+
+  --color-card-bottom: hsl(214, 26%, 12%);
+  --color-card-top: hsl(214, 19%, 16%);
+}
+
+body {
+  font-family: var(--primary-ff);
+  background-color: var(--color-background);
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.wrapper {
+  --width: 25rem;
+  max-width: var(--width);
+  margin: 0 auto;
+}
+
+.support-card {
+  border-radius: 22px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-card-top),
+    var(--color-card-bottom)
+  );
+  padding: 2rem;
+  height: 400px;
+}
+
+.support-card--thank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.support-card__image {
+  margin-bottom: 1.5rem;
+}
+
+.support-card__rating {
+  margin-bottom: 1.5rem;
+  background-color: var(--color-initial-radio);
+  color: var(--color-primary);
+  padding: 7px 10px;
+  border-radius: 10rem;
+}
+
+.support-card__icon-container {
+  --size: 2.5rem;
+
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-initial-radio);
+  margin-bottom: 1.5rem;
+}
+
+.support-card__title {
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.support-card__description {
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.form__label {
+  --size: 3rem;
+  display: inline-block;
+
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-initial-radio);
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 0.833rem;
+  transition: 0.3s;
+}
+
+.form__label:hover {
+  background-color: var(--color-hover-radio);
+  color: var(--color-heading);
+}
+
+.form__input:checked + .form__label {
+  background-color: var(--color-primary);
+  color: var(--color-heading);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.btn--submit {
+  border-radius: 10rem;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  background-color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0.75rem 0;
+  transition: 0.3s;
+}
+
+.btn--submit:hover {
+  background-color: var(--color-heading);
+  color: var(--color-primary);
+}
+
+.support-card[hidden] {
+  display: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
